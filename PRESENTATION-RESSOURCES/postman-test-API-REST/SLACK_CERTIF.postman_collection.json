@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "74df651c-55a6-44e5-9f9d-a6d1bea7e44a",
+		"name": "CRM_CERTIF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30761577"
+	},
+	"item": [
+		{
+			"name": "recuperer les users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recuperer les messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recuperer les channels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/channels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"channels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recuperer un user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recuperer un channels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/channels/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"channels",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recuperer un message",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/messages/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messages",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ajouter un user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"firstName\": \"michel\",\r\n    \"lastName\": \"Platini\",\r\n    \"nickname\": \"10\",\r\n    \"status\": \"INACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ajouter un message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"message\": \"test ajout message via postman\",\r\n    \"dateMessage\": \"2023-12-04T11:33:33.410045\",\r\n    \"user\": {\r\n        \"id\": 1,\r\n        \"firstName\": \"Jean Claude\",\r\n        \"lastName\": \"Dusse\",\r\n        \"nickname\": \"JCD\",\r\n        \"status\": \"INACTIVE\"\r\n    },\r\n    \"channel\": {\r\n        \"id\": 1,\r\n        \"name\": \"Canal1\",\r\n        \"creationDate\": \"2023-12-04T09:42:37.762342\",\r\n        \"status\": \"INACTIVE\"\r\n    },\r\n    \"status\": \"ACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ajouter un channel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Canal5\",\r\n        \"creationDate\": \"2023-12-04T14:19:37.762342\",\r\n        \"status\": \"INACTIVE\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/channels/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"channels",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "supprimer un user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"firstName\": \"michel\",\r\n    \"lastName\": \"Platini\",\r\n    \"nickname\": \"10\",\r\n    \"status\": \"INACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "supprimer un message",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"firstName\": \"michel\",\r\n    \"lastName\": \"Platini\",\r\n    \"nickname\": \"10\",\r\n    \"status\": \"INACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/messages/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messages",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "supprimer un channel",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"firstName\": \"michel\",\r\n    \"lastName\": \"Platini\",\r\n    \"nickname\": \"10\",\r\n    \"status\": \"INACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/channels/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"channels",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mise à jour user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"firstName\": \"Paul\",\r\n    \"lastName\": \"mondard\",\r\n    \"nickname\": \"PM\",\r\n    \"status\": \"INACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mise à jour channel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Canal three\",\r\n    \"creationDate\": \"2023-12-04T11:33:23.512512\",\r\n    \"status\": \"ACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/channels/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"channels",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mise à jour message",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"message\": \"test message put\",\r\n    \"dateMessage\": \"2023-12-04T10:51:47.158558\",\r\n    \"user\": null,\r\n    \"channel\": {\r\n        \"id\": 3,\r\n        \"name\": \"Canal three\",\r\n        \"creationDate\": \"2023-12-04T11:33:23.512512\",\r\n        \"status\": \"ACTIVE\"\r\n    },\r\n    \"status\": \"ACTIVE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/messages/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messages",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

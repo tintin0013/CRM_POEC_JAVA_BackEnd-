@@ -1,0 +1,21 @@
+SlackLike/HELP.md
+SlackLike/target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+SlackLike/src/main/resources/application.properties
+.DS_Store
+
+
+
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+
+
+### VS Code ###
+.vscode/

@@ -1,0 +1,4 @@
+Dictionnaire de données, UML et MLD construits avec Looping.
+
+https://www.looping-mcd.fr/
+
